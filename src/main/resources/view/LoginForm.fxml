@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="P1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="787.0" fitWidth="1292.0" layoutX="-176.0" layoutY="-2.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/Login1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="563.0" fitWidth="864.0" layoutX="116.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/LoginRec.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="375.0" fitWidth="387.0" layoutX="122.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true" rotate="65.0">
+         <image>
+            <Image url="@../assets/images/LoginGear.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="563.0" layoutY="126.0" text="WELCOME!" textFill="WHITE">
+         <font>
+            <Font name="Abyssinica SIL" size="60.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="388.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/login-i.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="UserLoginPane" layoutX="566.0" layoutY="202.0" prefHeight="392.0" prefWidth="299.0">
+         <children>
+            <TextField fx:id="txtUser" layoutX="20.0" layoutY="75.0" onAction="#txtUserOnAction" prefHeight="40.0" prefWidth="260.0" promptText="User Name" />
+            <JFXButton fx:id="btnLogin" layoutX="73.0" layoutY="251.0" onAction="#btnLoginOnAction" prefHeight="40.0" prefWidth="154.0" styleClass="loginbtn" stylesheets="@../assets/css/ButtonStyle.css" text="Log In">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="27.0" layoutY="307.0" text="Didn't have an Account ?" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="197.0" layoutY="306.0" onMouseClicked="#lblSignUpOnAction" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="Poppins ExtraBold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtPassword" layoutX="20.0" layoutY="149.0" onAction="#txtPasswordOnAction" prefHeight="40.0" prefWidth="260.0" promptText="Password" />
+            <Label fx:id="lblShowPassword" layoutX="27.0" layoutY="154.0" prefHeight="30.0" prefWidth="209.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+            <ToggleButton fx:id="showPass" layoutX="241.0" layoutY="157.0" mnemonicParsing="false" onAction="#showPassOnAction" style="-fx-background-color: #FFFFFF;">
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/show-password.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <Label layoutX="20.0" layoutY="203.0" onMouseClicked="#lblFogotPassOnMouseClicked" text="Fogot Password ?" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

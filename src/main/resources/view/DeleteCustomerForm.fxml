@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="772.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DeleteCustomerFormController">
+   <children>
+      <ImageView fitHeight="780.0" fitWidth="887.0" layoutX="-1.0" layoutY="-1.0" opacity="0.22" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/update-cust.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="167.0" layoutY="65.0" text="DELETE Customer">
+         <font>
+            <Font name="Poppins SemiBold" size="35.0" />
+         </font>
+         <effect>
+            <DropShadow height="0.0" offsetX="2.0" offsetY="2.0" radius="0.0" spread="1.0" width="0.0">
+               <color>
+                  <Color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" opacity="0.8160919547080994" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <HBox alignment="CENTER" layoutX="150.0" layoutY="600.0" prefHeight="51.0" prefWidth="300.0" spacing="40.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#btnClearOnAction" prefHeight="46.0" prefWidth="110.0" style="-fx-background-color: ffffff; -fx-background-radius: 30;" text="Clear">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/clear-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnDeleteOnAction" style="-fx-background-color: FF7070; -fx-background-radius: 30;" text="Delete">
+               <font>
+                  <Font name="Poppins SemiBold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/delete-user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <VBox layoutX="179.0" layoutY="179.0" prefHeight="374.0" prefWidth="322.0" spacing="30.0">
+         <children>
+            <TextField fx:id="txtId" onAction="#txtSearchOnAction" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtName" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtAddress" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtTel" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtDate" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtEmpId" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="60.0" layoutY="184.0" prefHeight="317.0" prefWidth="111.0" spacing="42.0">
+         <children>
+            <Label text="Customer ID :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Full Name :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Address :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Contact :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Date :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Employee ID :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

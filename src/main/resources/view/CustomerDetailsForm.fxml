@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="P1" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerDetailsFormController">
+   <children>
+      <ImageView fitHeight="908.0" fitWidth="1600.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/Emp-details-bg.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="back" buttonType="RAISED" contentDisplay="RIGHT" layoutX="50.0" layoutY="40.0" onAction="#btnBackOnAction" style="-fx-background-color: white; -fx-background-radius: 20;" text="Back">
+         <font>
+            <Font name="Poppins Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/back-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <VBox layoutX="70.0" layoutY="289.0" prefHeight="367.0" prefWidth="195.0" spacing="100.0">
+         <children>
+            <JFXButton fx:id="add" buttonType="RAISED" onAction="#btnAddOnAction" prefHeight="60.0" prefWidth="180.0" styleClass="px16-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="ADD&#10;Customer" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0">
+                     <image>
+                        <Image url="@../assets/images/add-emp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Poppins Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="update" buttonType="RAISED" onAction="#btnUpdateOnAction" prefHeight="60.0" prefWidth="180.0" styleClass="px16-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="UPDATE&#10;Customer" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0">
+                     <image>
+                        <Image url="@../assets/images/update-emp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Poppins Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="delete" buttonType="RAISED" onAction="#btnDeleteOnAction" prefHeight="60.0" prefWidth="180.0" styleClass="px16-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="DELETE&#10;Customer" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0">
+                     <image>
+                        <Image url="@../assets/images/delete-emp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Poppins Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <TableView fx:id="tblCustomer" layoutX="353.0" layoutY="205.0" prefHeight="645.0" prefWidth="1109.0" stylesheets="@../assets/css/TableView.css">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="128.0" text="Customer ID" />
+          <TableColumn fx:id="colName" prefWidth="235.0" text="Customer Name" />
+            <TableColumn fx:id="colAddress" prefWidth="253.0" text="Customer Address" />
+            <TableColumn fx:id="colTel" prefWidth="194.0" text="Contact Number" />
+            <TableColumn fx:id="colEmpId" prefWidth="167.0" text="Employee ID" />
+            <TableColumn fx:id="colDate" prefWidth="140.0" text="Date" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="385.0" layoutY="150.0" text="Customer Details" underline="true">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+      <HBox layoutX="680.0" layoutY="100.0" prefHeight="39.0" prefWidth="598.0" spacing="250.0">
+         <children>
+            <JFXButton fx:id="cDatails" buttonType="RAISED" prefHeight="38.0" prefWidth="165.0" style="-fx-background-color: #716A6A; -fx-background-radius: 35;" text="Customer Details" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/customerDW.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnVehicleOnAction" prefHeight="38.0" prefWidth="170.0" styleClass="panebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Vehicle Manage">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/vehicleB.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

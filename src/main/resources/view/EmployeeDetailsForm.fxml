@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="P1" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeDetailsFormController">
+   <children>
+      <ImageView fitHeight="908.0" fitWidth="1600.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/Emp-details-bg.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="back" buttonType="RAISED" contentDisplay="RIGHT" layoutX="50.0" layoutY="40.0" onAction="#btnBackOnAction" style="-fx-background-color: white; -fx-background-radius: 20;" text="Back">
+         <font>
+            <Font name="Poppins Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/back-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <VBox layoutX="70.0" layoutY="289.0" prefHeight="367.0" prefWidth="195.0" spacing="100.0">
+         <children>
+            <JFXButton fx:id="add" buttonType="RAISED" onAction="#btnAddOnAction" prefHeight="60.0" prefWidth="180.0" styleClass="px16-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="ADD&#10;Employee" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0">
+                     <image>
+                        <Image url="@../assets/images/add-emp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Poppins Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="update" buttonType="RAISED" onAction="#btnUpdateOnAction" prefHeight="60.0" prefWidth="180.0" styleClass="px16-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="UPDATE&#10;Employee" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0">
+                     <image>
+                        <Image url="@../assets/images/update-emp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Poppins Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="delete" buttonType="RAISED" onAction="#btnDeleteOnAction" prefHeight="60.0" prefWidth="180.0" styleClass="px16-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="DELETE&#10;Employee" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0">
+                     <image>
+                        <Image url="@../assets/images/delete-emp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Poppins Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <HBox layoutX="430.0" layoutY="80.0" prefHeight="39.0" prefWidth="847.0" spacing="250.0">
+         <children>
+            <JFXButton fx:id="datails" buttonType="RAISED" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #716A6A; -fx-background-radius: 35;" text="Details" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/empDW.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Poppins Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="attendance" buttonType="RAISED" onAction="#btnEmpAttendanceOnAction" prefWidth="140.0" styleClass="panebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Attendance">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/attendance-btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Poppins Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="salary" buttonType="RAISED" onAction="#btnEmpSalaryOnAction" prefWidth="105.0" styleClass="panebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Salary">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/salary-btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Poppins Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <TableView fx:id="tblEmp" layoutX="332.0" layoutY="200.0" prefHeight="645.0" prefWidth="1169.0" stylesheets="@../assets/css/TableView.css">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="104.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="167.0" text="Employee Name" />
+            <TableColumn fx:id="colNic" prefWidth="137.0" text="NIC" />
+            <TableColumn fx:id="colAddress" prefWidth="163.0" text="Address" />
+            <TableColumn fx:id="colTel" prefWidth="148.0" text="Contact Number" />
+            <TableColumn fx:id="colEmail" prefWidth="203.0" text="Email" />
+            <TableColumn fx:id="colJob" prefWidth="125.0" text="Job Roll" />
+            <TableColumn fx:id="colDate" prefWidth="121.0" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="385.0" layoutY="150.0" text="Employee Details" underline="true">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

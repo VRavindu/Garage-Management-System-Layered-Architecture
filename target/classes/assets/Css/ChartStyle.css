@@ -1,0 +1,54 @@
+.chart {
+    -fx-padding: 5px;
+    /*-fx-background-image: url("icon.png");*/
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+
+.chart-title {
+    -fx-text-fill: #000000;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+ }
+
+.axis-label {
+    -fx-text-fill: #4682b4;
+}
+
+.chart-legend {
+    -fx-background-color:  transparent;
+    -fx-padding: 10px;
+}
+
+.chart-legend-item-symbol{
+    -fx-background-radius: 0;
+}
+
+.chart-legend-item{
+    -fx-text-fill: #191970;
+}
+
+
+.default-color0.chart-bar {
+    -fx-background-color:
+        /*linear-gradient(to left, #ffc000, #796109, #020024),*/
+        linear-gradient(to top right, #f2782a, rgb(250, 175, 64));
+    /*-fx-background-insets: 0, 2;*/
+    -fx-background-radius: 40px;
+}
+
+.chart-plot-background {
+    -fx-background-color: #d7e2ff;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #fa8c32;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #fa8c32;
+}
+.chart-alternative-row-fill {
+    -fx-fill: #b0beff;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}

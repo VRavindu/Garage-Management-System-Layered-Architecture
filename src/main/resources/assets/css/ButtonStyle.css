@@ -1,0 +1,91 @@
+.panebtn{
+    -fx-background-color: #ffffff;
+    -fx-font: 13px poppins;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+}
+
+.panebtn:hover{
+    -fx-background-color: #fffe66;
+    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-border-radius: 20;
+}
+
+.px16-crudbtn{
+    -fx-background-color: #ffffff;
+    -fx-font: 16px poppins;
+    -fx-font-weight: bold;
+    -fx-background-radius: 40;
+}
+
+.px16-crudbtn:hover{
+    -fx-background-color: #fffe66;
+    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-border-radius: 35;
+    -fx-font: 16px poppins;
+    -fx-font-weight: bold;
+}
+
+.px17-crudbtn{
+    -fx-background-color: #ffffff;
+    -fx-font: 17px poppins;
+    -fx-font-weight: bold;
+    -fx-background-radius: 40;
+}
+
+.px17-crudbtn:hover{
+    -fx-background-color: #fffe66;
+    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-border-radius: 35;
+    -fx-font: 17px poppins;
+    -fx-font-weight: bold;
+}
+
+.px20-crudbtn{
+    -fx-background-color: #ffffff;
+    -fx-font: 20px poppins;
+    -fx-font-weight: bold;
+    -fx-background-radius: 40;
+}
+
+.px20-crudbtn:hover{
+    -fx-background-color: #fffe66;
+    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-border-radius: 35;
+    -fx-font: 20px poppins;
+    -fx-font-weight: bold;
+}
+
+.loginbtn{
+    -fx-background-color:
+    linear-gradient(to top right, #5ccaef, rgb(11, 158, 250));
+    -fx-background-radius: 30;
+    -fx-font-family: Gadugi;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+}
+.loginbtn:hover{
+    -fx-background-color: linear-gradient(to top right, #f37138, #f3af4b);
+    -fx-background-radius: 30;
+    -fx-font-family: Gadugi;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+}
+
+.profilebtn{
+    -fx-background-color: #fffe6c;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+}
+.proCbtn{
+    -fx-background-color: #ffa0a0;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+}
+

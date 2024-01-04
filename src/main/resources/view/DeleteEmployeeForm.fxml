@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="780.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DeleteEmployeeFormController">
+   <children>
+      <ImageView fitHeight="780.0" fitWidth="600.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/delete-emp.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="149.0" layoutY="40.0" text="DELETE Employee">
+         <font>
+            <Font name="Poppins SemiBold" size="35.0" />
+         </font>
+         <effect>
+            <DropShadow height="0.0" offsetX="2.0" offsetY="2.0" radius="0.0" spread="1.0" width="0.0">
+               <color>
+                  <Color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" opacity="0.8160919547080994" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <VBox layoutX="190.0" layoutY="143.0" prefHeight="489.0" prefWidth="322.0" spacing="24.0">
+         <children>
+            <TextField fx:id="txtId" onAction="#txtSearchOnAction" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtName" editable="false" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtNic" editable="false" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtAddress" editable="false" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtTel" editable="false" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtEmail" editable="false" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtJob" editable="false" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtDate" editable="false" prefHeight="37.0" prefWidth="275.0" promptText="Enter Here...">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="84.0" layoutY="150.0" prefHeight="452.0" prefWidth="94.0" spacing="36.0">
+         <children>
+            <Label text="Emp ID :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Full Name :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="NIC :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Address :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Contact :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Email :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Job Role :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Date :">
+               <font>
+                  <Font name="Liberation Mono Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="164.0" layoutY="632.0" prefHeight="64.0" prefWidth="305.0" spacing="30.0">
+         <children>
+            <JFXButton fx:id="clear" buttonType="RAISED" onAction="#btnClearOnAction" prefHeight="46.0" prefWidth="130.0" style="-fx-background-color: ffffff; -fx-background-radius: 30;" text="Clear">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/clear-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="delete" buttonType="RAISED" onAction="#btnDeleteOnAction" style="-fx-background-color: FF7070; -fx-background-radius: 30;" text="Delete">
+               <font>
+                  <Font name="Poppins SemiBold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/delete-user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

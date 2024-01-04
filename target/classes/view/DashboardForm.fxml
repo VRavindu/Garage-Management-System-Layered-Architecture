@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="P1" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="899.0" fitWidth="1668.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/Dash-BG.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="464.0" layoutY="62.0" text="Dashboard">
+         <font>
+            <Font name="Poppins Bold" size="45.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" layoutX="1458.0" layoutY="24.0" onAction="#btnLogOutOnAction" prefHeight="54.0" prefWidth="133.0" style="-fx-background-radius: 35; -fx-background-color: #474746;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="Poppins Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../assets/images/log-out.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="900.0" fitWidth="706.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/DashboardRec2.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="1296.0" layoutY="25.0" onAction="#btnProfileOnAction" prefHeight="48.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #474746;" text="Profile" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/Pro-Vector.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Poppins Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="29.0" layoutY="160.0" prefHeight="725.0" prefWidth="299.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#btnEmpOnAction" prefHeight="165.0" prefWidth="274.0" style="-fx-background-radius: 100;" text="Employee&#10;Management" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Medium" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="72.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/Emp-btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnStockOnAction" prefHeight="165.0" prefWidth="274.0" style="-fx-background-radius: 90;" text="Stoke&#10;Management" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Medium" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="58.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
+                     <image>
+                        <Image url="@../assets/images/Stock-btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnCustOnAction" prefHeight="165.0" prefWidth="274.0" style="-fx-background-radius: 100;" text="Customer&#10;Management" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Medium" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
+                     <image>
+                        <Image url="@../assets/images/customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnSupOnAction" prefHeight="165.0" prefWidth="274.0" style="-fx-background-radius: 100;" text="Supplier&#10;Management" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Medium" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
+                     <image>
+                        <Image url="@../assets/images/supplier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <BarChart fx:id="chrtStock" layoutX="390.0" layoutY="480.0" legendSide="TOP" legendVisible="false" prefHeight="390.0" prefWidth="560.0" stylesheets="@../assets/css/ChartStyle.css" title="Item Stoke Details">
+        <xAxis>
+          <CategoryAxis fx:id="descAxis" side="BOTTOM">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="12.0" />
+               </tickLabelFont></CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="qtyAxis" side="LEFT">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="12.0" />
+               </tickLabelFont></NumberAxis>
+        </yAxis>
+      </BarChart>
+      <Label fx:id="lblTime" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="963.0" layoutY="73.0" prefHeight="71.0" prefWidth="226.0" textAlignment="CENTER">
+         <font>
+            <Font name="Poppins Light" size="50.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="lblDay" alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="1076.0" layoutY="26.0" prefHeight="51.0" prefWidth="133.0" textAlignment="CENTER">
+         <font>
+            <Font name="Poppins Regular" size="35.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="lblDate" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="878.0" layoutY="30.0" prefHeight="43.0" prefWidth="198.0" textAlignment="CENTER">
+         <font>
+            <Font name="Poppins Regular" size="30.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Line endX="1140.7149658203125" layoutX="465.0" layoutY="455.0" startX="-133.33334350585938" stroke="#474746" strokeWidth="3.0" />
+      <LineChart fx:id="chartEmpDetails" layoutX="1007.0" layoutY="482.0" legendVisible="false" prefHeight="390.0" prefWidth="560.0" stylesheets="@../assets/css/ChartStyle.css" title="Employee Attendance Details">
+        <xAxis>
+          <CategoryAxis fx:id="empAxis" side="BOTTOM">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="12.0" />
+               </tickLabelFont>
+            </CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="daysAxis" minorTickVisible="false" side="LEFT" tickLength="10.0" tickMarkVisible="false">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="12.0" />
+               </tickLabelFont>
+            </NumberAxis>
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

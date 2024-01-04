@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ProfileFormController">
+   <children>
+      <AnchorPane fx:id="viewPane" prefHeight="700.0" prefWidth="575.0" visible="false">
+         <children>
+            <TextField editable="false" layoutX="33.0" layoutY="111.0" opacity="0.0" />
+            <ImageView fitHeight="756.0" fitWidth="656.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/Tools.png" />
+               </image>
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="201.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/logo2.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="151.0" layoutY="252.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="276.0" text="The Wrenchers">
+               <font>
+                  <Font name="Segoe UI Semibold" size="25.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="215.0" layoutY="329.0" prefHeight="121.0" prefWidth="230.0" spacing="30.0">
+               <children>
+                  <TextField fx:id="txtName" editable="false" prefHeight="44.0" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="txtPass" editable="false" prefHeight="44.0" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="txtEmail" editable="false" prefHeight="44.0" style="-fx-background-radius: 10;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" layoutX="107.0" layoutY="337.0" prefHeight="121.0" prefWidth="100.0" spacing="49.0">
+               <children>
+                  <Label text="Name :">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="Password :">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="Email :">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <JFXButton layoutX="232.0" layoutY="576.0" onAction="#btnEditOnAction" prefHeight="36.0" prefWidth="114.0" styleClass="profilebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Edit Profile">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/edit.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editPane" prefHeight="700.0" prefWidth="575.0">
+         <children>
+            <TextField editable="false" opacity="0.0" />
+            <ImageView fitHeight="756.0" fitWidth="656.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/Tools.png" />
+               </image>
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="201.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/logo2.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="151.0" layoutY="252.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="276.0" text="The Wrenchers">
+               <font>
+                  <Font name="Segoe UI Semibold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txteName" layoutX="207.0" layoutY="325.0" prefHeight="44.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtePass" layoutX="207.0" layoutY="402.0" prefHeight="44.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </PasswordField>
+            <VBox alignment="CENTER_RIGHT" layoutX="92.0" layoutY="334.0" prefHeight="121.0" prefWidth="100.0" spacing="50.0">
+               <children>
+                  <Label text="Name :">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="Password :">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="Email :">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="232.0" layoutY="562.0" prefHeight="109.0" prefWidth="114.0" spacing="15.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="114.0" styleClass="profilebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Save" />
+                  <JFXButton buttonType="RAISED" onAction="#btnCancleOnAction" prefHeight="36.0" prefWidth="92.0" styleClass="proCbtn" stylesheets="@../assets/css/ButtonStyle.css" text="Cancel" />
+               </children>
+            </VBox>
+            <Label fx:id="lblShowPassword" layoutX="232.0" layoutY="418.0" prefHeight="30.0" prefWidth="237.0" style="-fx-background-color: #FFFFFF;" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ToggleButton fx:id="showPass" layoutX="418.0" layoutY="412.0" mnemonicParsing="false" onAction="#showPassOnAction" style="-fx-background-color: #FFFFFF;">
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/show-password.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <TextField fx:id="txteEmail" layoutX="207.0" layoutY="478.0" prefHeight="44.0" style="-fx-background-radius: 10;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

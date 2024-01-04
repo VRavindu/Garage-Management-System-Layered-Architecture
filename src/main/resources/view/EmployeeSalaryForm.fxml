@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="P1" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeSalaryFormController">
+   <children>
+      <ImageView fitHeight="908.0" fitWidth="1600.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/Emp-details-bg.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="back" buttonType="RAISED" contentDisplay="RIGHT" layoutX="50.0" layoutY="40.0" onAction="#btnBackOnAction" style="-fx-background-color: white; -fx-background-radius: 20;" text="Back">
+         <font>
+            <Font name="Poppins Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/back.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <HBox layoutX="430.0" layoutY="80.0" prefHeight="39.0" prefWidth="847.0" spacing="250.0">
+         <children>
+            <JFXButton fx:id="datails" buttonType="RAISED" onAction="#btnEmpDetailOnAction" prefHeight="38.0" prefWidth="110.0" styleClass="panebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Details">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/details-btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Poppins Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="attendance" buttonType="RAISED" onAction="#btnEmpAttendanceOnAction" prefHeight="36.0" prefWidth="140.0" styleClass="panebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Attendance">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/attendance-btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Poppins Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="salary" buttonType="RAISED" prefWidth="105.0" style="-fx-background-color: #716A6A; -fx-background-radius: 35;" text="Salary" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/salaryEW.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Poppins Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <TableView fx:id="tblEmpSalary" layoutX="597.0" layoutY="199.0" prefHeight="645.0" prefWidth="909.0" stylesheets="@../assets/css/TableView.css">
+        <columns>
+          <TableColumn fx:id="colEid" prefWidth="113.0" text="Employee ID" />
+          <TableColumn fx:id="colName" prefWidth="214.0" text="Employee Name" />
+            <TableColumn fx:id="colDays" prefWidth="121.0" text="Working Days" />
+            <TableColumn fx:id="colSalary" prefWidth="166.0" text="Daily Salary" />
+            <TableColumn fx:id="colBonus" prefWidth="150.0" text="Bonus" />
+            <TableColumn fx:id="colTotal" prefWidth="165.0" text="Total Amount" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="597.0" layoutY="151.0" text="Employee Salary" underline="true">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="43.0" layoutY="204.0" prefHeight="636.0" prefWidth="530.0">
+         <children>
+            <ImageView fitHeight="618.0" fitWidth="500.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/recAtnd.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER_RIGHT" layoutX="67.0" layoutY="54.0" prefHeight="352.0" prefWidth="110.0" spacing="40.0">
+               <children>
+                  <Label text="Date :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Salary ID :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Employee ID :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Name :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Working Days :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Daily Salary :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Bonus :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Total Amount :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="183.0" layoutY="53.0" prefHeight="483.0" prefWidth="222.0" spacing="30.0">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="222.0">
+                     <children>
+                        <Label fx:id="lblYear" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMonth" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblSalId" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="224.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbEid" onAction="#cmbEmpIdOnAction" prefHeight="33.0" prefWidth="235.0" />
+                  <Label fx:id="lblName" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblWorkDays" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDSalary" prefHeight="30.0" prefWidth="220.0" />
+                  <TextField fx:id="txtBonus" onAction="#txtGetTotalOnAction" prefHeight="30.0" prefWidth="220.0" promptText="Press Enter to Get Total" />
+                  <Label fx:id="lblTotal" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <JFXButton buttonType="RAISED" layoutX="226.0" layoutY="534.0" onAction="#btnSalaryOnAction" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #F1E66A; -fx-background-radius: 35;" text="Pay">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

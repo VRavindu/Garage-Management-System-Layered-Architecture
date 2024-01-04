@@ -1,0 +1,36 @@
+desc user;
+desc employee;
+desc customer;
+desc supplier;
+desc supplier_order;
+desc salary;
+desc repair;
+desc tools;
+desc item_stock;
+desc vehicle;
+desc attendance;
+desc supplier_order_details;
+desc repair_details;
+desc tool_details;
+
+SELECT * FROM employee;
+
+SHOW DATABASES;
+
+SELECT qty, description FROM item_stock;
+
+select * from salary;
+drop table salary;
+select * from supplier_order;
+select * from supplier_order_details;
+delete from supplier_order;
+delete from supplier_order_details;
+SELECT COUNT(*) FROM attendance WHERE e_id = 'E1' AND MONTH(Date) = 11 AND status = 'Present';
+
+
+USE GMS;
+SELECT * FROM supplier_order_details;
+SELECT * FROM user;
+SELECT qty , description FROM item_stock;
+SELECT COUNT(status), e_id FROM attendance WHERE MONTH(Date) AND status = 'Present' GROUP BY e_id;
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="P1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterFormController">
+   <children>
+      <ImageView fitHeight="787.0" fitWidth="1292.0" layoutX="-176.0" layoutY="-2.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/Login1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="563.0" fitWidth="864.0" layoutX="116.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/LoginRec.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="458.0" layoutY="137.0" text="Create an Account" textFill="WHITE">
+         <font>
+            <Font name="Poppins Medium" size="43.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLogin" layoutX="648.0" layoutY="509.0" onAction="#btnSignUpOnAction" prefHeight="40.0" prefWidth="148.0" styleClass="loginbtn" stylesheets="@../assets/css/ButtonStyle.css" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="232.0" fitWidth="270.0" layoutX="194.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/login-registration.png" />
+         </image></ImageView>
+      <ImageView fitHeight="367.0" fitWidth="422.0" layoutX="141.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/gears.png" />
+         </image></ImageView>
+      <TextField fx:id="txtUser" layoutX="593.0" layoutY="239.0" onAction="#txtUserOnAction" prefHeight="40.0" prefWidth="260.0" promptText="User Name" />
+      <PasswordField fx:id="txtPassword" layoutX="593.0" layoutY="309.0" onAction="#txtPasswordOnAction" prefHeight="40.0" prefWidth="260.0" promptText="Password (abc123)" />
+      <PasswordField fx:id="txtCPassword" layoutX="593.0" layoutY="379.0" onAction="#txtCPasswordOnAction" prefHeight="40.0" prefWidth="260.0" promptText="Confirm Password" />
+      <Label fx:id="lblShowCPassword" layoutX="602.0" layoutY="384.0" prefHeight="30.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+      <ToggleButton fx:id="showPass" layoutX="819.0" layoutY="318.0" mnemonicParsing="false" onAction="#showPassOnAction" style="-fx-background-color: #FFFFFF;">
+         <graphic>
+            <ImageView fitHeight="13.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/show-password.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </ToggleButton>
+      <Label layoutX="611.0" layoutY="563.0" text="Already have an Account ?" textFill="WHITE">
+         <font>
+            <Font name="Poppins Medium" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="791.0" layoutY="563.0" onMouseClicked="#lblLoginOnAction" text="Log In" textFill="WHITE">
+         <font>
+            <Font name="Poppins ExtraBold" size="14.0" />
+         </font>
+      </Label>
+      <ToggleButton fx:id="showCPass" layoutX="819.0" layoutY="387.0" mnemonicParsing="false" onAction="#showCPassOnAction" style="-fx-background-color: #FFFFFF;">
+         <graphic>
+            <ImageView fitHeight="13.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/show-password.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </ToggleButton>
+      <Label fx:id="lblShowPassword" layoutX="602.0" layoutY="315.0" prefHeight="30.0" prefWidth="207.0" style="-fx-background-color: #FFFFFF;" visible="false" />
+      <TextField fx:id="txtEmail" layoutX="593.0" layoutY="446.0" prefHeight="40.0" prefWidth="260.0" promptText="Email Address" />
+   </children>
+</AnchorPane>

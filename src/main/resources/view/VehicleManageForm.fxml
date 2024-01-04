@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="P1" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.VehicleManageFormController">
+   <children>
+      <ImageView fitHeight="908.0" fitWidth="1600.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/Emp-details-bg.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="back" buttonType="RAISED" contentDisplay="RIGHT" layoutX="50.0" layoutY="40.0" onAction="#btnBackOnAction" style="-fx-background-color: white; -fx-background-radius: 20;" text="Back">
+         <font>
+            <Font name="Poppins Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/back-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <TableView fx:id="tblVehicle" layoutX="475.0" layoutY="210.0" prefHeight="607.0" prefWidth="1013.0" stylesheets="@../assets/css/TableView.css">
+         <columns>
+            <TableColumn fx:id="colPltNo" prefWidth="179.0" text="Plate Number" />
+            <TableColumn fx:id="colType" editable="false" prefWidth="207.0" text="Vehicle Type" />
+            <TableColumn fx:id="colCustId" prefWidth="214.0" text="Customer ID" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="457.0" layoutY="160.0" prefHeight="40.0" prefWidth="247.0" text="Vehicle Manage" underline="true">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+      <HBox layoutX="680.0" layoutY="100.0" prefHeight="39.0" prefWidth="600.0" spacing="250.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#btnCustDetailsOnAction" prefHeight="38.0" prefWidth="183.0" styleClass="panebtn" stylesheets="@../assets/css/ButtonStyle.css" text="Customer Details">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/customerDB.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" prefHeight="38.0" prefWidth="162.0" style="-fx-background-color: #716A6A; -fx-background-radius: 35;" text="Vehicle Manage" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/vehicleW.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <VBox layoutX="67.0" layoutY="331.0" prefHeight="342.0" prefWidth="211.0" spacing="60.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#btnRepairOnAction" prefHeight="73.0" prefWidth="206.0" styleClass="px20-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="Repairs" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0">
+                     <image>
+                        <Image url="@../assets/images/repairB.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnAddVehiOnAction" prefHeight="73.0" prefWidth="206.0" styleClass="px20-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="ADD&#10;Vehicle" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" translateX="-22.0">
+                     <image>
+                        <Image url="@../assets/images/add2.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnUpdateVehiOnAction" prefHeight="73.0" prefWidth="206.0" styleClass="px20-crudbtn" stylesheets="@../assets/css/ButtonStyle.css" text="UPDATE&#10;Vehicle" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" translateX="-19.0">
+                     <image>
+                        <Image url="@../assets/images/update2.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
